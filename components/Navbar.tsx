@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white">
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
         {/* Left: Categories Icon */}
         <div className="flex items-center space-x-2">
