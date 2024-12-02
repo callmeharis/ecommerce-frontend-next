@@ -1,3 +1,4 @@
+import AuthModal from "@/components/AuthModal";
 import Cards from "@/components/Cards";
 import Herosection from "@/components/Herosection";
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div>
       <Herosection/>
        <Cards/>
+       <AuthModal/>
     </div>
   );
 }
