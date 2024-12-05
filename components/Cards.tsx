@@ -1,12 +1,9 @@
-// components/FeatureCards.tsx
 import React from "react";
-
 const Cards: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-gray-50">
-      {/* Secure Payment Gateways */}
-      <div className="flex items-center space-x-4 p-4 bg-white shadow-md rounded-lg">
-        <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-600 rounded-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-gray-50">
+      <div className="flex items-center space-x-4 p-5 bg-white shadow-sm rounded-lg">
+        <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-pink-700 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"
@@ -27,9 +24,7 @@ const Cards: React.FC = () => {
           <p className="text-gray-600">48+ gateways to ensure your security.</p>
         </div>
       </div>
-
-      {/* Genuine Customer Reviews */}
-      <div className="flex items-center space-x-4 p-4 bg-white shadow-md rounded-lg">
+      <div className="flex items-center space-x-4 p-5 bg-white shadow-sm rounded-lg">
         <div className="flex items-center justify-center w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,9 +46,7 @@ const Cards: React.FC = () => {
           <p className="text-gray-600">Find verified reviews showcased on our platforms.</p>
         </div>
       </div>
-
-      {/* 24/7 Customer Support */}
-      <div className="flex items-center space-x-4 p-4 bg-white shadow-md rounded-lg">
+      <div className="flex items-center space-x-4 p-5 bg-white shadow-sm rounded-lg">
         <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-600 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,9 +68,7 @@ const Cards: React.FC = () => {
           <p className="text-gray-600">Always our support team is available for you.</p>
         </div>
       </div>
-
-      {/* Easy Return Policy */}
-      <div className="flex items-center space-x-4 p-4 bg-white shadow-md rounded-lg">
+      <div className="flex items-center space-x-4 p-5 bg-white shadow-sm rounded-lg">
         <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +93,4 @@ const Cards: React.FC = () => {
     </div>
   );
 };
-
 export default Cards;
-
-
