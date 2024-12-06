@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+
 
 const Navbar: React.FC = () => {
   return (
@@ -17,18 +19,18 @@ const Navbar: React.FC = () => {
           <li className="text-pink-500 border-b-2 border-pink-500">
             <a href="#">Home</a>
           </li>
-          <li className="text-gray-600 hover:text-pink-500 transition">
-            <a href="#">Shops</a>
-          </li>
-          <li className="text-gray-600 hover:text-pink-500 transition">
-            <a href="#">Most Popular</a>
-          </li>
-          <li className="text-gray-600 hover:text-pink-500 transition">
-            <a href="#">Best Deal</a>
-          </li>
-          <li className="text-gray-600 hover:text-pink-500 transition">
-            <a href="#">Contact</a>
-          </li>
+          <Link href="/shops" className="text-gray-600 hover:text-pink-500 transition">
+        Shops
+      </Link>
+      <Link href="/populars" className="text-gray-600 hover:text-pink-500 transition">
+        Most Popular
+      </Link>
+      <Link href="/deal" className="text-gray-600 hover:text-pink-500 transition">
+        Best Deal
+      </Link>
+      <Link href="/contact" className="text-gray-600 hover:text-pink-500 transition">
+        Contact
+      </Link>
         </ul>
 
         {/* Right: App Download */}

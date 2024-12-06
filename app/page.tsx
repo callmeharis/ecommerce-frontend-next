@@ -1,3 +1,4 @@
+
 import AuthModal from "@/components/AuthModal";
 import Cards from "@/components/Cards";
 import Categoryslider from "@/components/Categoryslider";
@@ -17,6 +18,7 @@ export default function Home() {
     </div> */}
     <ProductsGrid/>
     <ShopeCards/>
+    
     </div>
   );
 }

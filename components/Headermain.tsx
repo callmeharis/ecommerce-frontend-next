@@ -26,7 +26,7 @@ const handleCloseModal = () => setIsModalOpen(false);
   </div>
 <div className="w-full sm:w-[300px] md:w-[450px] lg:w-[600px] relative">
   <input
-    className="border-pink-600 border p-2 px-4 rounded-lg w-full"
+    className="border-pink-600  p-2 px-4 rounded-lg w-full"
     type="text"
     placeholder="Enter any product name..."
   />
@@ -41,8 +41,9 @@ const handleCloseModal = () => setIsModalOpen(false);
         Login
       </button>
       <AuthModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      
     </div>
-    <BiUser />
+    <BiUser className='hidden lg:block text-2xl cursor-pointer'/>
 
   <div className="relative">
     <FiHeart />
@@ -57,13 +58,12 @@ const handleCloseModal = () => setIsModalOpen(false);
     <HiOutlineShoppingBag />
     <div
   className="bg-pink-500 rounded-full absolute top-0 right-0 w-[14px] h-[14px] 
-             text-[10px] text-white grid place-items-center translate-x-1 translate-y-1"
->
+             text-[10px] text-white grid place-items-center translate-x-1 translate-y-1">
   0
-</div>
-  </div>
-</div>
-</div>     
+        </div>
+      </div>
+    </div>
+  </div>     
   )
 }
 export default Headermain;
