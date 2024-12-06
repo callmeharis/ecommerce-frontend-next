@@ -3,7 +3,7 @@ import React from 'react';
 const categories = [
   {
     name: 'Beauty',
-    image: 'https://demo.readyecommerce.app/storage/categories/oqR2OKCBebHikPXge9B8L6ASZXb295nEgm8FgPat.jpg', // Replace with actual image URL
+    image: 'https://demo.readyecommerce.app/storage/categories/oqR2OKCBebHikPXge9B8L6ASZXb295nEgm8FgPat.jpg',
   },
   {
     name: 'Sports & Entertainment',
@@ -43,28 +43,28 @@ const categories = [
   },
 ];
 
-const Categoryslider = () => {
+const CategorySlider = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-10 px-5">
+    <div className=" py-10 px-5">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Categories</h2>
         <div className="flex justify-between items-center mb-4">
           <button className="text-gray-600 hover:text-gray-900">&larr;</button>
-          <span className="text-sm text-blue-500 font-medium cursor-pointer">View All</span>
+          <span className="text-sm text-pink-600 font-medium cursor-pointer">View All</span>
           <button className="text-gray-600 hover:text-gray-900">&rarr;</button>
         </div>
         <div className="flex space-x-4 overflow-x-auto scrollbar-hide">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="min-w-[120px] flex flex-col items-center bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow"
+              className="min-w-[100px] sm:min-w-[120px] md:min-w-[150px] lg:min-w-[180px] flex flex-col items-center rounded-lg p-4  hover:border hover:border-pink-600 cursor-pointer "
             >
               <img
                 src={category.image}
                 alt={category.name}
-                className="w-16 h-16 object-cover mb-2"
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover mb-2 transition-transform duration-300 hover:scale-105"
               />
-              <p className="text-sm font-medium text-gray-700">{category.name}</p>
+              <p className="text-xs sm:text-sm font-medium text-gray-700 text-center hover:text-pink-700 ">{category.name}</p>
             </div>
           ))}
         </div>
@@ -73,4 +73,4 @@ const Categoryslider = () => {
   );
 };
 
-export default Categoryslider;
+export default CategorySlider;

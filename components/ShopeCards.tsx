@@ -7,7 +7,7 @@ const shops = [
     categories: 12,
     rating: 5.0,
     isOnline: false,
-    image: 'https://demo.readyecommerce.app/storage/shops/banner/m8CFxEJxTlk95ZOmUVtRmgUfBTUeYpbFSNJYSN5o.jpg', // Replace with actual image URL
+    image: 'https://demo.readyecommerce.app/storage/shops/banner/m8CFxEJxTlk95ZOmUVtRmgUfBTUeYpbFSNJYSN5o.jpg',
   },
   {
     name: 'Easy Life',
@@ -37,12 +37,15 @@ const shops = [
 
 const ShopeCards = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-10 px-5">
+    <div className="bg-gray-100 py-10 px-5">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6">Top Rated Shops</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <h2 className="text-2xl font-bold mb-6 text-center md:text-left">Top Rated Shops</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {shops.map((shop, index) => (
-            <div key={index} className="bg-pink-500 text-white rounded-lg shadow-md p-4 hover:shadow-lg">
+            <div
+              key={index}
+              className="bg-pink-700 text-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+            >
               <div className="relative">
                 <img
                   src={shop.image}
@@ -65,7 +68,7 @@ const ShopeCards = () => {
                   <span className="text-yellow-400 text-lg">⭐</span>
                   <span className="ml-1">{shop.rating}</span>
                 </div>
-                <button className="mt-3 bg-white text-pink-500 px-4 py-2 rounded font-medium hover:bg-gray-200">
+                <button className="mt-3 bg-white text-pink-700 px-4 py-2 rounded font-medium hover:bg-gray-200 transition duration-300">
                   Visit Store →
                 </button>
               </div>
@@ -77,4 +80,4 @@ const ShopeCards = () => {
   );
 };
 
-export default ShopeCards;
+export default ShopeCards;
