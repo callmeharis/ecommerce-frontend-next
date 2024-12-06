@@ -1,4 +1,5 @@
-import AllProducts from "@/components/AllProducts";
+
+import Authmodal from "@/components/Authmodal";
 import Cards from "@/components/Cards";
 import Categoryslider from "@/components/Categoryslider";
 // import FlashSale from "@/components/FlashSale";
@@ -8,12 +9,16 @@ import ShopeCards from "@/components/ShopeCards";
 export default function Home() {
   return (
     <div>
-      <Herosection />
-      <Cards />
-      <Categoryslider />
-      <ProductsGrid />
-      <ShopeCards />
-      <AllProducts />
+      <Herosection/>
+       <Cards/>
+       <Categoryslider/>
+       <Authmodal/>
+       {/* <div className="h-80 bg-pink-200 flex items-center justify-center mb-20">
+      <FlashSale />
+    </div> */}
+    <ProductsGrid/>
+    <ShopeCards/>
+    
     </div>
   );
 }
