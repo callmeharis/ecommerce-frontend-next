@@ -20,30 +20,39 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({
   discount,
 }) => {
   return (
-    <div className="bg-white border rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-      <div className="relative">
+    <div className="bg-white border rounded-lg p-4">
+      <div className="relative ">
+        {/* Discount Badge */}
         {discount > 0 && (
-            <span className="absolute top-2 left-2 bg-pink-500 text-white text-xs px-2 py-1 rounded">
+          <span className="absolute top-2 left-2 bg-pink-700 text-white text-xs px-2 py-1 rounded">
             {discount}% OFF
           </span>
         )}
+        {/* Product Image */}
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-48 object-cover rounded-lg"
-          />
+          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
+      {/* Product Details */}
       <div className="mt-4">
-        <h3 className="text-sm font-semibold truncate">{title}</h3>
+        <h3 className="text-sm md:text-base font-semibold truncate">{title}</h3>
         <div className="flex items-center justify-between mt-2">
-          <span className="text-pink-500 text-lg font-bold">€{price}</span>
-          <span className="text-gray-400 line-through">€{originalPrice}</span>
+          <span className="text-pink-700 text-lg md:text-xl font-bold">
+            €{price.toFixed(2)}
+          </span>
+          <span className="text-gray-400 text-sm md:text-base line-through">
+            €{originalPrice.toFixed(2)}
+          </span>
         </div>
+        {/* Rating and Sold Info */}
         <div className="flex items-center text-yellow-500 mt-2">
-          <span className="text-sm font-medium">{rating} ⭐</span>
+          <span className="text-sm font-medium">{rating.toFixed(1)} ⭐</span>
           <span className="text-gray-500 ml-2 text-sm">{sold} Sold</span>
         </div>
-        <button className="w-full mt-4 border border-pink-500 text-pink-500 py-2 rounded-lg hover:bg-pink-500 hover:text-white transition-colors">
+        {/* Buy Now Button */}
+        <button className="w-full mt-4 border border-pink-700 text-pink-700 py-2 rounded-lg text-sm md:text-base hover:bg-pink-700 hover:text-white transition-colors">
           Buy Now
         </button>
       </div>
@@ -52,5 +61,3 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({
 };
 
 export default ProductsCards;
-
-

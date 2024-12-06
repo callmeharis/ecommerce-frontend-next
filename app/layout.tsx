@@ -4,6 +4,7 @@ import "./globals.css";
 import Headertop from "@/components/Headertop";
 import Headermain from "@/components/Headermain";
 import Navbar from "@/components/Navbar";
+import FFooter from "@/components/FFooter";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Headermain/>
         <Navbar/>
         {children}
+        <FFooter/>
       </body>
     </html>
   );

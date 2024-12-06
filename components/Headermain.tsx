@@ -6,7 +6,6 @@ import { BiUser } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
-
 const Headermain = () => {
    
 const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,15 +44,8 @@ const handleCloseModal = () => setIsModalOpen(false);
     </div>
     <BiUser className='hidden lg:block text-2xl cursor-pointer'/>
 
-  <div className="relative">
-    <FiHeart />
-    <div
-  className="bg-pink-500 rounded-full absolute top-0 right-0 w-[14px] h-[14px] 
-             text-[10px] text-white grid place-items-center translate-x-1 translate-y-1"
->
-  0
-</div>
-  </div>
+      <div className="flex gap-4 items-center text-gray-500 text-lg cursor:pointer; hover:text-pink-700">
+ 
   <div className="relative">
     <HiOutlineShoppingBag />
     <div
@@ -64,6 +56,7 @@ const handleCloseModal = () => setIsModalOpen(false);
       </div>
     </div>
   </div>     
+  </div>
   )
 }
 export default Headermain;
