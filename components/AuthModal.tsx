@@ -6,7 +6,7 @@ interface AuthModalProps {
   onClose: () => void;
 }
 
-const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
+const Authmodal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState<'login' | 'signup'>('login');
 
   if (!isOpen) return null;
@@ -111,4 +111,4 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default AuthModal;
+export default Authmodal;
