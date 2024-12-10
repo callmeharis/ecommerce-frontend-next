@@ -34,7 +34,6 @@ const shops = [
     image: 'https://demo.readyecommerce.app/storage/shops/banner/IOKTJkNTU5J8bruWGfJURymtmj4La4tLLNxAabsI.png',
   },
 ];
-
 const ShopeCards = () => {
   return (
     <div className="bg-gray-100 py-10 px-5">
@@ -50,11 +49,11 @@ const ShopeCards = () => {
                 <img
                   src={shop.image}
                   alt={shop.name}
-                  className="rounded-t-lg w-full h-28 object-cover"
+                  className="rounded-t-lg w-full h-28 object-cover "
                 />
                 <span
                   className={`absolute top-2 right-2 px-2 py-1 text-xs rounded ${
-                    shop.isOnline ? 'bg-green-500' : 'bg-gray-400'
+                    shop.isOnline ? '' : 'bg-gray-400'
                   }`}
                 >
                   {shop.isOnline ? 'Online' : 'Offline'}

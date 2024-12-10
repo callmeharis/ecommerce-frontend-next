@@ -31,7 +31,7 @@ const Cards: React.FC = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center bg-white p-4 rounded-md hover:shadow-lg transition-shadow duration-200"
+            className="flex flex-col items-center text-center bg-white p-4 rounded-md transition-shadow duration-200"
           >
             <div className="mb-3">{feature.icon}</div>
             <h3 className="font-semibold text-lg text-gray-800">{feature.title}</h3>
