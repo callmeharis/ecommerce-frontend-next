@@ -135,13 +135,17 @@ const Dealcards: React.FC = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="max-w-xs bg-white shadow-md rounded-lg overflow-hidden"
+            className="max-w-xs bg-white  overflow-hidden border border-transparent hover:border-pink-700 rounded-lg transition-all duration-300"
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-48 object-cover"
-            />
+            <div className="w-full h-48 overflow-hidden group relative">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        
+            
             <div className="p-4">
               <h2 className="text-lg font-bold text-gray-800 truncate">
                 {product.name}

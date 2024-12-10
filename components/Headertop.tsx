@@ -3,7 +3,6 @@ import React from "react";
 const Headertop: React.FC = () => {
   return (
     <div className="bg-white">
-      {/* Header */}
       <header className="bg-pink-700 text-white py-3">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <div className="flex flex-col sm:flex-row items-center sm:space-x-4">

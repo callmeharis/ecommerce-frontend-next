@@ -20,7 +20,7 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({
   discount,
 }) => {
   return (
-    <div className="bg-white border rounded-lg p-4">
+    <div className="bg-white border rounded-lg p-4 hover:border-pink-700 ">
       <div className="relative ">
         {/* Discount Badge */}
         {discount > 0 && (
@@ -29,11 +29,14 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({
           </span>
         )}
         {/* Product Image */}
-        <img
-          src={imageSrc}
-          alt={title}
-          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-        />
+        <div className="w-full h-48 overflow-hidden group relative">
+  <img
+    src={imageSrc}
+    alt={title}
+    className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+  />
+</div>
+
       </div>
       {/* Product Details */}
       <div className="mt-4">
@@ -52,7 +55,7 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({
           <span className="text-gray-500 ml-2 text-sm">{sold} Sold</span>
         </div>
         {/* Buy Now Button */}
-        <button className="w-full mt-4 border border-pink-700 text-pink-700 py-2 rounded-lg text-sm md:text-base hover:bg-pink-700 hover:text-white transition-colors">
+        <button className="w-full mt-4 border border-pink-700 text-pink-700 py-2 rounded-lg text-sm md:text-base transition-colors">
           Buy Now
         </button>
       </div>
