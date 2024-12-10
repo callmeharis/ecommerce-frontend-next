@@ -33,8 +33,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Headertop/>
+        <div className="sticky top-0 bg-white z-10">
         <Headermain/>
         <Navbar/>
+        </div>
+       
         {children}
         <FFooter/>
       </body>

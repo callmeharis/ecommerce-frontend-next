@@ -26,12 +26,12 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+    <div className="bg-gray-50 p-8 rounded-lg ">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center bg-white p-4 rounded-md shadow hover:shadow-lg transition-shadow duration-200"
+            className="flex flex-col items-center text-center bg-white p-4 rounded-md transition-shadow duration-200"
           >
             <div className="mb-3">{feature.icon}</div>
             <h3 className="font-semibold text-lg text-gray-800">{feature.title}</h3>
