@@ -26,7 +26,7 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+    <div className="bg-gray-50 p-8 rounded-lg ">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div
