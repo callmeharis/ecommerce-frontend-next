@@ -124,13 +124,9 @@ const Dealcards: React.FC = () => {
       },
 
   ];
-
   return (
     <div className="container mx-auto p-4">
-      {/* Title */}
       <h1 className="text-2xl font-bold text-gray-800 mb-6">Best Deal</h1>
-      
-      {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div
@@ -144,8 +140,6 @@ const Dealcards: React.FC = () => {
             className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
           />
         </div>
-        
-            
             <div className="p-4">
               <h2 className="text-lg font-bold text-gray-800 truncate">
                 {product.name}

@@ -5,9 +5,17 @@ import { BiUser } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Authmodal from './AuthModal';
+import EmptyCart from './Emptycarts';
+
 
 
 const Headermain = () => {
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
    
 const [isModalOpen, setIsModalOpen] = useState(false);
 const handleOpenModal = () => setIsModalOpen(true);
@@ -64,13 +72,45 @@ const handleCloseModal = () => setIsModalOpen(false);
     </div>
   </div>
   <div className="relative">
-    <HiOutlineShoppingBag className="text-gray-600 text-lg size-5" />
-    <div
-      className="bg-pink-700 rounded-full absolute top-0 right-0 w-[17px] h-[17px] 
-                 text-[10px] text-white flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
-      0
+      <div onClick={toggleCart} className="relative cursor-pointer">
+        <HiOutlineShoppingBag className="text-gray-600 text-lg size-5" />
+        <div
+          className="bg-pink-700 rounded-full absolute top-0 right-0 w-[17px] h-[17px] 
+                     text-[10px] text-white flex items-center justify-center transform translate-x-1/2 -translate-y-1/2"
+        >
+          0
+        </div>
+      </div>
+
+      {/* Slide-in Cart */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 transform transition-transform ${
+          isCartOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="absolute top-4 right-4 cursor-pointer" onClick={toggleCart}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="h-6 w-6 text-gray-600"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <EmptyCart /> {/* Render the Empty Cart component */}
+      </div>
+
+      {/* Background Overlay */}
+      {isCartOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleCart}
+        ></div>
+      )}
     </div>
-  </div>
 </div>
 
     </div>

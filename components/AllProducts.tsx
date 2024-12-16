@@ -103,7 +103,6 @@ const AllProducts = () => {
             className="group flex flex-col justify-between max-w-xs bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-pink-700 "
           >
             <div className="relative">
-              {/* Hover effect on image */}
               <img
                 src={product.imageSrc}
                 alt={product.title}
