@@ -50,12 +50,11 @@ const Authmodal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         <div className="mt-6">
           <div>
             Welcome!
-            <br />
-            Please Login to Continue
           </div>
           <br />
           {activeTab === 'login' && (
              <form className="space-y-4">
+              <h1>Please Login to Continue</h1>
               <input
                 type="email"
                 placeholder="Email"
@@ -68,7 +67,7 @@ const Authmodal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               />
               <button
                 type="submit"
-                className="w-full py-2 text-white bg-pink-400 rounded-md hover:bg-pink-500"
+                className="w-full py-2 text-white bg-pink-500 rounded-md hover:bg-pink-600"
               >
                 Login
               </button>
@@ -77,6 +76,7 @@ const Authmodal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           {activeTab === 'signup' && (
             <form className="space-y-4">
+              <h1>Create your account</h1>
               <input
                 type="text"
                 placeholder="Full Name"
@@ -99,7 +99,7 @@ const Authmodal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               />
               <button
                 type="submit"
-                className="w-full py-2 text-white bg-pink-400 rounded-md hover:bg-pink-500"
+                className="w-full py-2 text-white bg-pink-500 rounded-md hover:bg-pink-600"
               >
                 Signup
               </button>

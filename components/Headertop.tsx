@@ -12,11 +12,10 @@ const Headertop: React.FC = () => {
 
           <div className="flex items-center">
             <select className="bg-pink-700 text-white w-[70px] sm:w-[120px] py-1 px-2 rounded-md outline-none">
-              <option className="bg-white text-black " value="ESP">English</option>
-              <option className="bg-white text-black" value="Bangla">Bengali</option>
+              <option className="bg-white text-black" value="ESP">English</option>
+              <option className="bg-white text-black " value="Bangla">Bengali</option>
               <option className="bg-white text-black" value="Arabic">Arabic</option>
-              <option className="bg-white text-black" value="Chinese">Chinese</option>
-              <option className="bg-white text-black" value="English">ESP</option>
+              <option className="bg-white text-black" value="English">English</option>
             </select>
           </div>
 

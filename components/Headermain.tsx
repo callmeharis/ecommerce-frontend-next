@@ -9,6 +9,16 @@ import Authmodal from './Authmodal';
 
 
 const Headermain = () => {
+
+   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  const handleIconClick = () => {
+    setIsAuthModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsAuthModalOpen(false);
+  };
    
 const [isModalOpen, setIsModalOpen] = useState(false);
 const handleOpenModal = () => setIsModalOpen(true);
@@ -45,25 +55,31 @@ const handleCloseModal = () => setIsModalOpen(false);
 <div className=" flex hover:text-pink-700 space-x-3">
       <button
         onClick={handleOpenModal}
-        className=" "
+        className="flex gap-2"
       >
         Login
+        <BiUser className='hidden lg:block text-2xl cursor-pointer'/>
       </button>
       <Authmodal isOpen={isModalOpen} onClose={handleCloseModal} />
-    <BiUser className='hidden lg:block text-2xl cursor-pointer'/>
     </div>
 
       <div className="flex gap-4 items-center text-gray-500 text-lg cursor:pointer; hover:text-pink-700">
  
       <div className="relative flex items-center space-x-5">
-  <div className="relative">
-    <FiHeart className="text-gray-600 text-lg size-5" />
-    <div
-      className="bg-pink-700 rounded-full absolute top-0 right-0 w-[17px] h-[17px] 
-                 text-[10px] text-white flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
-      0
+      <div>
+      <div className="relative" onClick={handleIconClick} style={{ cursor: "pointer" }}>
+        <FiHeart className="text-gray-600 text-lg size-5" />
+        <div
+          className="bg-pink-700 rounded-full absolute top-0 right-0 w-[17px] h-[17px] 
+                     text-[10px] text-white flex items-center justify-center transform translate-x-1/2 -translate-y-1/2"
+        >
+          0
+        </div>
+      </div>
+
+      {/* Auth Modal */}
+      {isAuthModalOpen && <Authmodal isOpen={isAuthModalOpen} onClose={closeModal} />}
     </div>
-  </div>
   <div className="relative">
     <HiOutlineShoppingBag className="text-gray-600 text-lg size-5" />
     <div
