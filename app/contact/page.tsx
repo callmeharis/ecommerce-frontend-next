@@ -58,7 +58,11 @@ const ContactPage: React.FC = () => {
               id="message"
               placeholder="Write your message ..."
               rows={5}
+<<<<<<< HEAD
+              className="w-full border-gray-800 rounded-lg  focus:ring-pink-500 focus:border-pink-500"
+=======
               className="w-full border-gray-300 rounded-lg  focus:ring-pink-500 focus:border-pink-500"
+>>>>>>> ca89b515580a73b2cf0bdc41d548671b816e29ec
               required
             ></textarea>
           </div>

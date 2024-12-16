@@ -145,7 +145,7 @@ const Dealcards: React.FC = () => {
                 {product.name}
               </h2>
               <div className="flex items-center justify-between mt-2">
-                <p className="text-red-500 font-bold">€{product.price}</p>
+                <p className="text-pink-600 font-bold">€{product.price}</p>
                 {product.discount > 0 && (
                   <p className="line-through text-gray-500">
                     €{product.originalPrice}
